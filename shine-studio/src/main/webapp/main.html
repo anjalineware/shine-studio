@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"> </script> 
+  <script src= "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"> </script> 
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity= "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+  
+  <title>Shine Studio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!--css file--> 
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="mood.css" rel="stylesheet">
+  <link href="note.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index.html">SHINE STUDIO</a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Mood Tracker</a></li>
+          <li><a class="nav-link scrollto" href="#about">Notes</a></li>
+          <li><a class="nav-link scrollto" href="#services">Games</a></li>
+          <li><a class="nav-link scrollto" href="#faq">Themes</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ======= mood tracker ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row gy-4">
+  
+        <div class="container-mood">
+          <h1>Mood Tracker</h1>
+      
+          <div id="mood-container">
+            <div class="mood-option" onclick="selectMood('😄')">😄</div>
+            <div class="mood-option" onclick="selectMood('😊')">😊</div>
+            <div class="mood-option" onclick="selectMood('😐')">😐</div>
+            <div class="mood-option" onclick="selectMood('😞')">😞</div>
+            <div class="mood-option" onclick="selectMood('😢')">😢</div>
+          </div>
+      
+          <div id="selected-mood"></div>
+      
+          <div id="mood-history">
+            <h2>Mood History</h2>
+            <div id="history-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section><!-- mood end -->
+
+  <main id="main">
+
+    <!-- ======= notes ======= -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="container my-3">
+            <h1>What's on your mind?</h1>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"> Add a Note </h5>
+                <div class="form-group">
+                  <textarea class="form-control" id="addTxt" rows="3"></textarea>
+                </div>
+                <button id="addBtn" style="background-color: #FF965B;" hover="background-color: #fa8543" hover="border: 2px solid black"> Add Note </button>
+              </div>
+            </div>
+            <hr>
+            <h1>Your Notes</h1>
+            <hr>
+            <div id="notes" class="row container-fluid"></div>
+          </div>
+      
+        
+        
+        </div>
+
+      </div>
+    </section><!-- End notes -->
+
+    <!-- ======= games ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <p>Games</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <h4 class="title"><a href="">BREATHING EXERCISE</a></h4>
+              <a href="games/breathing game/breath.html"><img src="assets/img/breath.svg" frameborder="0" style="border:0; width: 100%; height: 490px;" allowfullscreen></img></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <h4 class="title"><a href="">SNAKE GAME</a></h4>
+              <a href="games/snake game/snack.html"><img src="assets/img/snake.gif" frameborder="0" style="border:0; width: 100%; height: 490px;" allowfullscreen></img></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+
+              <h4 class="title"><a href="">TIC TAC TOE (2 players)</a></h4>
+              <a href="games/tic tac tic/tictactoc3.html"><img src="assets/img/ttt.gif" frameborder="0" style="border:0; width: 100%; height: 490px;" allowfullscreen></img></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon-box">
+               <h4 class="title"><a href="">BUBBLE POP</a></h4>
+               <a href="games/bubble pop/bubble.html"><img src="assets/img/bubble.gif" frameborder="0" style="border:0; width: 100%; height: 490px;" allowfullscreen></img></a>
+              </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          
+    </section><!-- End F.A.Q Section -->
+
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          
+    </section><!-- End Contact Us Section -->
+
+    
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#service">Why Join Us</a></li>
+            </ul>
+          </div>
+
+          
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Follow us</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+          
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Shine Studio</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="mood.js"></script>
+  <script src="note.js"></script>
+
+</body>
+
+</html>
